@@ -38,7 +38,7 @@ fi
 cd "layers/$layer_name"
 poetry export > requirements.txt
 
-docker image build -f ../../Dockerfile -t $layer_name --arch $architecture .
+docker image build -f ../../Dockerfile -t $layer_name --platform linux/$architecture .
 docker container run --name=$layer_name $layer_name
 docker container cp $layer_name:/tmp/layer/python .
 docker container rm $layer_name
