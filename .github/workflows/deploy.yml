@@ -25,6 +25,7 @@ jobs:
       - uses: aws-actions/configure-aws-credentials@v1-node16
         with:
           role-to-assume: ${{ secrets.ROLE_GITHUB_ACTIONS_CLOUDFORMATION_DEPLOY }}
+          aws-region: us-east-1
       - uses: aws-actions/setup-sam@v2
       - run: pip install poetry
       - run: make build
