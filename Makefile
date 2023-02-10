@@ -21,7 +21,7 @@ deploy:
 	sam deploy \
 		--stack-name $(stack_name) \
 		--template-file template.yml \
-		--role-arn ${} \
+		--role-arn ${ROLE_CLOUDFORMATION_DEPLOY} \
 		--no-fail-on-empty-changeset
 
 .PHONY: \
