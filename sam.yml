@@ -6,6 +6,11 @@ Resources:
     Properties:
       ContentUri: layers/base
 
+  LayerScraping:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      ContentUri: layers/scraping
+
   ParameterLayerArnBase:
     Type: AWS::SSM::Parameter
     Properties:
