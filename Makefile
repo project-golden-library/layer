@@ -9,6 +9,7 @@ clean:
 build: 
 	./build.sh --arch arm64 --name base
 	./build.sh --arch arm64 --name scraping
+	./build.sh --arch arm64 --name feedparser
 
 package:
 	sam package \

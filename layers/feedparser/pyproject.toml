@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "feedparser-layer"
+version = "0.1.0"
+description = ""
+authors = ["sinofseven <em.s.00001@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+feedparser = "6.0.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

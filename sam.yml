@@ -11,6 +11,11 @@ Resources:
     Properties:
       ContentUri: layers/scraping
 
+  LayerFeedparser:
+    Type: AWS::Serverless::LayerVersion
+    Properties:
+      ContentUri: layers/feedparser
+
   ParameterLayerArnBase:
     Type: AWS::SSM::Parameter
     Properties:
@@ -24,3 +29,10 @@ Resources:
       Name: /Golden/Layer/Scraping
       Type: String
       Value: !Ref LayerScraping
+
+  ParameterLayerArnFeedparser:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: /Golden/Layer/Feedparser
+      Type: String
+      Value: !Ref LayerFeedparser
